@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-RedirectLoginApplicationImplicit">
+    <DisplayName>AM-RedirectLoginApplicationImplicit</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Remove/>
+    <!--
+        Since Salesforce implicit grant only uses a callback#params Edge cannont intercept as nothing beyond '#' is available
+        Therefore, use authorization_code flow and then callout to Salesforce to get a token in the callback.
+        Then generated an access_token using implict.
+        To differentiate between the implicit and authorization_code flow, set state to: {{code | implicit} {messageid}
+        Then detect code | implicit in callback via Extract Variables
+    -->
+    <Set>
+        <Headers>
+            <Header name="Location">{idp_auth_endpoint}?response_type=code&amp;client_id={idp_client_id}&amp;scope=openid profile email offline_access&amp;nonce={app_nonce}&amp;redirect_uri={idp_edge_callback}&amp;prompt=login&amp;state=implicit {messageid}</Header>
+            <Header name="Access-Control-Allow-Origin">*</Header>
+            <Header name="Access-Control-Allow-Methods">POST, GET, OPTIONS</Header>
+            <Header name="Access-Control-Allow-Headers">Accept, Content-Type, connection, content-length, Authorization, Location</Header>
+            <Header name="Access-Control-Allow-Credentials">true</Header>
+        </Headers>
+        <StatusCode>302</StatusCode>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</AssignMessage>

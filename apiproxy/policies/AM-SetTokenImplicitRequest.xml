@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-SetTokenImplicitRequest">
+    <DisplayName>AM-SetTokenImplicitRequest</DisplayName>
+    <Remove>
+        <Headers/>
+        <FormParams/>
+        <Payload/>
+    </Remove>
+    <Set>
+        <Headers>
+            <Header name="Content_Type">application/x_www_form_urlencoded</Header>
+            <Header name="Accept">application/json</Header>
+        </Headers>
+        <FormParams>
+            <FormParam name="grant_type">authorization_code</FormParam>
+            <FormParam name="client_id">{idp_client_id}</FormParam>
+            <FormParam name="client_secret">{idp_client_secret}</FormParam>
+            <FormParam name="redirect_uri">{idp_edge_callback}</FormParam>
+            <FormParam name="code">{idp_code}</FormParam>
+        </FormParams>
+        <Verb>POST</Verb>
+    </Set>
+    <AssignVariable>
+        <Name>idp_target_url</Name>
+        <Ref>idp_token_endpoint</Ref>
+    </AssignVariable>
+    <AssignVariable>
+        <!-- For some reason request.queryparam.state gets set to nothing, so save it so we get routed to the response flow in the proxy. -->
+        <Name>idp_callback_state</Name>
+        <Ref>request.queryparam.state</Ref>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

@@ -1,0 +1,24 @@
+[
+    {
+       "displayName" : "pingstatus-oidc-v1-google-product-test",
+       "scopes" : [],
+       "proxies" : [
+          "google-healthcare-v1",
+          "oidc-v1-google-demo",
+          "pingstatus-oauth-v1"
+       ],
+       "approvalType" : "auto",
+       "name" : "pingstatus-oidc-v1-google-product-test",
+       "environments" : [
+          "test"
+       ],
+       "description" : "pingstatus-oidc-v1-google",
+       "attributes" : [
+          {
+             "name" : "access",
+             "value" : "public"
+          }
+       ],
+       "apiResources" : []
+    }
+]

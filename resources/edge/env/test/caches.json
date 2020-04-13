@@ -1,0 +1,18 @@
+[
+    {
+       "maxElementsOnDisk" : 0,
+       "expirySettings" : {
+          "timeoutInSec" : {
+             "value" : "300"
+          }
+       },
+       "distributed" : true,
+       "inMemorySizeInKB" : 0,
+       "persistent" : false,
+       "description" : "oidc-v1-google-demo-sessions",
+       "maxElementsInMemory" : 0,
+       "name" : "oidc-v1-google-demo-sessions",
+       "overflowToDisk" : false,
+       "diskSizeInMB" : 0
+    }
+]

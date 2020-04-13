@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-RedirectAppCallbackImplicit">
+    <DisplayName>AM-RedirectAppCallbackImplicit</DisplayName>
+    <Remove>
+        <Headers/>
+        <FormParams/>
+        <Payload/>
+    </Remove>
+    <Set>
+        <Headers>
+            <Header name="Location">{app_redirect_uri}#access_token={oauthv2accesstoken.OA-GenerateAccessTokenImplicit.access_token}&amp;client_id={app_client_id}&amp;scope={app_scope}&amp;state={app_state}&amp;expires_in={oauthv2accesstoken.OA-GenerateAccessTokenImplicit.expires_in}</Header>
+            <Header name="Access-Control-Allow-Origin">*</Header>
+            <Header name="Access-Control-Allow-Methods">POST, GET, OPTIONS</Header>
+            <Header name="Access-Control-Allow-Headers">Accept, Content-Type, connection, content-length, Authorization, Location</Header>
+            <Header name="Access-Control-Allow-Credentials">true</Header>
+        </Headers>
+        <Payload/>
+        <StatusCode>302</StatusCode>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

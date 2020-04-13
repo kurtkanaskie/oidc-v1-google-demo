@@ -1,0 +1,18 @@
+{
+    "kurtkanaskie+appdeveloper@google.com": [
+        {
+            "name" : "pingstatus-oidc-v1-google-app-test",
+            "callbackUrl" : "https://kurtkanaskie.github.io/oidc-client-code-google/callback.html""scopes" : [],
+            "attributes" : [
+              {
+                 "value" : "pingstatus-oidc-v1-google-app-test",
+                 "name" : "DisplayName"
+              },
+              {
+                 "name" : "Notes",
+                 "value" : "Created via CI/CD"
+              }
+           ]
+        }
+    ]
+}

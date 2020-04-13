@@ -1,0 +1,64 @@
+[
+    {
+      "name": "oidc-v1-google-demo",
+      "encrypted": false,
+      "entry": [
+        {
+          "name": "idp_auth_endpoint",
+          "value": "https://accounts.google.com/o/oauth2/v2/auth"
+        },
+        {
+          "name": "idp_edge_logout",
+          "value": "https://amer-demo13-test.apigee.net/oidc-google/v1/oauth/logoutcallback"
+        },
+        {
+          "name": "idp_edge_callback",
+          "value": "https://amer-demo13-test.apigee.net/oidc-google/v1/oauth/callback"
+        },
+        {
+          "name": "idp_client_id",
+          "value": "259582898922-09rlp79tbb57dpos37hhvv5pbon64e6b.apps.googleusercontent.com"
+        },
+        {
+          "name": "idp_client_secret",
+          "value": "BFIaJoBh7nr5fkLdKE_vaXDo"
+        },
+        {
+          "name": "idp_token_endpoint",
+          "value": "https://oauth2.googleapis.com/token"
+        },
+        {
+          "name": "idp_edge_logout_pkce",
+          "value": "https://amer-demo13-test.apigee.net/oidc-google/v1/oauth-pkce/logoutcallback"
+        },
+        {
+          "name": "idp_scope",
+          "value": "openid profile email https://www.googleapis.com/auth/cloud-platform"
+        },
+        {
+          "name": "idp_userinfo_endpoint",
+          "value": "https://openidconnect.googleapis.com/v1/userinfo"
+        },
+        {
+          "name": "idp_prompt",
+          "value": "consent"
+        },
+        {
+          "name": "token_expires_in",
+          "value": "3600042"
+        },
+        {
+          "name": "refresh_token_expires_in",
+          "value": "28800042"
+        },
+        {
+          "name": "idp_revoke_endpoint",
+          "value": "https://oauth2.googleapis.com/revoke"
+        },
+        {
+          "name": "idp_edge_callback_pkce",
+          "value": "https://amer-demo13-test.apigee.net/oidc-google/v1/oauth-pkce/callback"
+        }
+      ]
+    }
+]
