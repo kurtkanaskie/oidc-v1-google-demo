@@ -1,2 +1,2 @@
 edge-test_oauth-keys.json
-resources/edge/test/kvms.json
+resources/edge/env/test/kvms.json
