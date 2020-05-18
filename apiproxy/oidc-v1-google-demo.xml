@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<APIProxy revision="7" name="oidc-v1-google-demo">
+<APIProxy revision="9" name="oidc-v1-google-demo">
     <Basepaths>/azure-b2c</Basepaths>
     <ConfigurationVersion majorVersion="4" minorVersion="0"/>
-    <CreatedAt>1583441623621</CreatedAt>
+    <CreatedAt>1581439594696</CreatedAt>
     <CreatedBy>defaultUser</CreatedBy>
-    <Description>From oidc-v1-okta-trial, uses GCP project "Edge OIDC Demo"</Description>
+    <Description>Portals use Authorization header for key/secret, GCP project "Edge OIDC Demo".</Description>
     <DisplayName>oidc-v1-google-demo</DisplayName>
-    <LastModifiedAt>1583441623621</LastModifiedAt>
+    <LastModifiedAt>1589822699355</LastModifiedAt>
     <LastModifiedBy>defaultUser</LastModifiedBy>
-    <ManifestVersion>SHA-512:5ff1ba4cdac178332edacd29fd506a19f01c92d91b22f0e7e292d77ce376083e47a88fefd99db4d1b309d3dd23f6f153dd9b6b336624db46e2e19fceb680f856</ManifestVersion>
+    <ManifestVersion>SHA-512:0c75767f6f894b98337982d539135df59c169b812bd37f3366489e937207bc27397b032b34a18aba0e0458ddc00a81f4d40159473c2d473a57aa07f1e439dd8a</ManifestVersion>
     <Policies>
         <Policy>AM-AddCORS</Policy>
         <Policy>AM-AuthSession</Policy>

@@ -5,6 +5,11 @@
         <Name>request.content</Name>
         <Ref>app_request</Ref>
     </AssignVariable>
+    <AssignVariable>
+        <Name>request.header.authorization</Name>
+        <Ref>app_request_authorization</Ref>
+    </AssignVariable>
+    <!-- Exco portal sends authorization, not form params -->
     <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
     <AssignTo createNew="false" transport="http" type="request"/>
 </AssignMessage>

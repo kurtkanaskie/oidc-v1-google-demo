@@ -6,5 +6,9 @@
         <Name>app_request</Name>
         <Ref>request.content</Ref>
     </AssignVariable>
+    <AssignVariable>
+        <Name>app_request_authorization</Name>
+        <Ref>request.header.authorization</Ref>
+    </AssignVariable>
     <AssignTo createNew="false" transport="http" type="request"/>
 </AssignMessage>
