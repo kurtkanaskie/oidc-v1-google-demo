@@ -4,7 +4,7 @@
     <ConfigurationVersion majorVersion="4" minorVersion="0"/>
     <CreatedAt>1581439594696</CreatedAt>
     <CreatedBy>defaultUser</CreatedBy>
-    <Description>Portals use Authorization header for key/secret, GCP project "Edge OIDC Demo".</Description>
+    <Description>Integrated portal uses Auth header for key/secret, GCP project "Edge OIDC Demo".</Description>
     <DisplayName>oidc-v1-google-demo</DisplayName>
     <LastModifiedAt>1589822699355</LastModifiedAt>
     <LastModifiedBy>defaultUser</LastModifiedBy>
