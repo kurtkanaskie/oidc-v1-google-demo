@@ -68,10 +68,10 @@ Via the source without replacements
 # TODO
 * Step by step setup of GCP Project and Integrated Portal.
 * Proxy design
- * Verify client_id when via formparams (demo app) and via Authorization Basic (portals OAS)
- * Verify redirect_url on GET /authorize
- * GET /.well-known/openid-configuration
- * Anti forgery with client
+  * Verify client_id when via formparams (demo app) and via Authorization Basic (portals OAS)
+  * Verify redirect_url on GET /authorize
+  * GET /.well-known/openid-configuration
+  * Anti forgery with client
 * CI/CD
- * Publish spec to portal
- * Deploy to prod using separate keys from GCP Project
+  * Publish spec to portal
+  * Deploy to prod using separate keys from GCP Project
