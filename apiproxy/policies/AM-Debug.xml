@@ -3,6 +3,11 @@
     <DisplayName>AM-Debug</DisplayName>
     <Properties/>
     <AssignVariable>
+        <Name>debug_authorization</Name>
+        <Ref>request.header.authorization</Ref>
+    </AssignVariable>
+    <!--
+    <AssignVariable>
         <Name>debug_app_client_id</Name>
         <Ref>app_client_id</Ref>
     </AssignVariable>
@@ -86,5 +91,6 @@
         <Name>debugProfileAccessAttributeExternalRefreshToken</Name>
         <Ref>oauthv2accesstoken.OA-GetTokenProfileAttributes.accesstoken.external_refresh_token</Ref>
     </AssignVariable>
+    -->
     <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
 </AssignMessage>

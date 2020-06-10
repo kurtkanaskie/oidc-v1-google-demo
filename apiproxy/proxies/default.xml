@@ -46,15 +46,10 @@
                     <Condition>(app_response_type Equals "code"</Condition>
                     <Name>AM-RedirectLoginApplicationCode</Name>
                 </Step>
-                <Step>
-                    <!-- want "token" or "token id_token" or "id_token token" -->
-                    <Condition>(app_response_type Matches "*token*"</Condition>
-                    <Name>AM-RedirectLoginApplicationImplicit</Name>
-                </Step>
             </Response>
             <Condition>(request.verb = "GET") and (proxy.pathsuffix MatchesPath "/authorize")</Condition>
         </Flow>
-        <Flow name="callback - code">
+        <Flow name="callback">
             <Description>Redirect URL for ApigeeEdgeTest app in IdP</Description>
             <Request>
                 <Step>
@@ -85,49 +80,7 @@
             </Response>
             <Condition>(request.verb = "GET") and (proxy.pathsuffix MatchesPath "/callback") and (request.queryparam.state Matches "code*")</Condition>
         </Flow>
-        <Flow name="callback - implicit">
-            <Description>Redirect URL for ApigeeEdgeTest app in IdP</Description>
-            <Request>
-                <Step>
-                    <Name>EV-CallbackParams</Name>
-                </Step>
-                <Step>
-                    <Name>LC-Session</Name>
-                </Step>
-                <Step>
-                    <Name>EV-AuthSession</Name>
-                </Step>
-                <Step>
-                    <Name>AM-SetTokenImplicitRequest</Name>
-                </Step>
-            </Request>
-            <Response>
-                <Step>
-                    <Name>EV-GetExternalTokenValues</Name>
-                </Step>
-                <Step>
-                    <Name>DJ-IDToken</Name>
-                </Step>
-                <Step>
-                    <Name>JS-CalculateExpiresIn</Name>
-                </Step>
-                <Step>
-                    <Name>AM-SetResponseType</Name>
-                </Step>
-                <Step>
-                    <Name>OA-GenerateAccessTokenImplicit</Name>
-                </Step>
-                <Step>
-                    <Name>AM-RedirectAppCallbackImplicit</Name>
-                </Step>
-            </Response>
-            <!-- We set the request verb to POST in the request, need to look for that in response flow -->
-            <Condition>((request.verb = "GET") or (request.verb = "POST")) and 
-                        (proxy.pathsuffix MatchesPath "/callback") and 
-                       ((request.queryparam.state matches "implicit*") or (idp_callback_state Matches "implicit*")) 
-            </Condition>
-        </Flow>
-        <Flow name="token - authorization_code">
+        <Flow name="token - code">
             <Description/>
             <Request>
                 <Step>
@@ -171,7 +124,7 @@
                        (request.verb = "POST") and 
                        (request.formparam.grant_type == "authorization_code")</Condition>
         </Flow>
-        <Flow name="token - refresh-TBD">
+        <Flow name="token - refresh">
             <Description/>
             <Request>
                 <Step>
@@ -248,7 +201,7 @@
             <Response/>
             <Condition>(proxy.pathsuffix MatchesPath "/revoke") and (request.verb = "POST")</Condition>
         </Flow>
-        <Flow name="OPTIONS">
+        <Flow name="cors">
             <Description/>
             <Request/>
             <Response/>
@@ -279,8 +232,7 @@
         <Condition>(proxy.pathsuffix MatchesPath "/userinfo") or 
                    (proxy.pathsuffix MatchesPath "/revoke") or 
                    (proxy.pathsuffix MatchesPath "/logout") or 
-                   ((proxy.pathsuffix MatchesPath "/token") and (request.formparam.grant_type != "client_credentials")) or 
-                   ((proxy.pathsuffix MatchesPath "/callback") and (request.queryparam.state Matches "implicit*")) 
+                   (proxy.pathsuffix MatchesPath "/token")
         </Condition>
         <TargetEndpoint>default</TargetEndpoint>
     </RouteRule>

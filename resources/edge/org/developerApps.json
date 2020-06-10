@@ -1,16 +1,53 @@
 {
-    "kurtkanaskie+appdeveloper@google.com": [
+    "cicd-developer-APIGEE_ENVIRONMENT@google.com": [
         {
-            "name" : "pingstatus-oidc-v1-google-app-test",
-            "callbackUrl" : "https://kurtkanaskie.github.io/oidc-client-code-google/callback.html""scopes" : [],
+            "name" : "oidc-v1-google-demo-app-APIGEE_ENVIRONMENT",
+            "callbackUrl" : "https://kurtkanaskie.github.io/oidc-client-code-google/callback.html",
+            "scopes" : [],
+            "apiProducts": [ "oidc-v1-google-demo-product-APIGEE_ENVIRONMENT" ],
+            "keyExpiresIn": -1,
             "attributes" : [
               {
-                 "value" : "pingstatus-oidc-v1-google-app-test",
+                 "value" : "oidc-v1-google-demo-app-APIGEE_ENVIRONMENT",
                  "name" : "DisplayName"
               },
               {
                  "name" : "Notes",
-                 "value" : "Created via CI/CD"
+                 "value" : "Created via CI/CD, runs at: https://kurtkanaskie.github.io/oidc-client-code-google"
+              }
+           ]
+        },
+        {
+            "name" : "oidc-v1-google-demo-drupal8-portal-app-APIGEE_ENVIRONMENT",
+            "callbackUrl" : "http://dev-amer-demo13.pantheonsite.io/oauth_redirect",
+            "scopes" : [],
+            "apiProducts": [ "oidc-v1-google-demo-product-APIGEE_ENVIRONMENT" ],
+            "keyExpiresIn": -1,
+            "attributes" : [
+              {
+                 "value" : "oidc-v1-google-demo-drupal8-portal-app-APIGEE_ENVIRONMENT",
+                 "name" : "DisplayName"
+              },
+              {
+                 "name" : "Notes",
+                 "value" : "Created via CI/CD, runs in Drupal 8 portal at: https://dev-amer-demo13.pantheonsite.io"
+              }
+           ]
+        },
+        {
+            "name" : "oidc-v1-google-demo-integrated-portal-app-APIGEE_ENVIRONMENT",
+            "callbackUrl" : "https://developer.kurtkanaskie.net/oauth_redirect",
+            "scopes" : [],
+            "apiProducts": [ "oidc-v1-google-demo-product-APIGEE_ENVIRONMENT" ],
+            "keyExpiresIn": -1,
+            "attributes" : [
+              {
+                 "value" : "oidc-v1-google-demo-integrated-portal-app-APIGEE_ENVIRONMENT",
+                 "name" : "DisplayName"
+              },
+              {
+                 "name" : "Notes",
+                 "value" : "Created via CI/CD, runs in integrated portal at: https://developer.kurtkanaskie.net"
               }
            ]
         }

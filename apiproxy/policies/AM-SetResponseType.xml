@@ -7,10 +7,6 @@
         <Name>app_response_type_code</Name>
         <Value>code</Value>
     </AssignVariable>
-    <AssignVariable>
-        <Name>app_response_type_implicit</Name>
-        <Value>token</Value>
-    </AssignVariable>
     <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
     <AssignTo createNew="false" transport="http" type="request"/>
 </AssignMessage>

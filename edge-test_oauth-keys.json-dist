@@ -1,11 +1,11 @@
 {
 	"web": {
-		"client_id": "CLIENT_ID_GOES_HERE",
-		"client_secret": "CLIENT_SECRET_GOES_HERE",
+		"client_id": "CLIENT_ID_HERE",
+		"client_secret": "CLIENT_SECRET_HERE",
 		"project_id": "GCP_PROJECT_ID_HERE",
 		"auth_uri": "https://accounts.google.com/o/oauth2/auth",
 		"token_uri": "https://oauth2.googleapis.com/token",
 		"auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-		"redirect_uris": ["https://amer-demo13-test.apigee.net/oidc-google/v1/oauth/callback"]
+		"redirect_uris": ["https://APIGEE_ORG-APIGEE_ENV.apigee.net/oidc-google/v1/oauth/callback"]
 	}
 }

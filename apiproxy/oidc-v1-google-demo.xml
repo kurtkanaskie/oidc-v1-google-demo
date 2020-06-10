@@ -1,29 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<APIProxy revision="9" name="oidc-v1-google-demo">
+<APIProxy revision="14" name="oidc-v1-google-demo">
     <Basepaths>/azure-b2c</Basepaths>
     <ConfigurationVersion majorVersion="4" minorVersion="0"/>
     <CreatedAt>1581439594696</CreatedAt>
     <CreatedBy>defaultUser</CreatedBy>
-    <Description>Integrated portal uses Auth header for key/secret, GCP project "Edge OIDC Demo".</Description>
+    <Description>GCP project "Edge OIDC Demo". @DESCRIPTION</Description>
     <DisplayName>oidc-v1-google-demo</DisplayName>
-    <LastModifiedAt>1589822699355</LastModifiedAt>
+    <LastModifiedAt>1591815749351</LastModifiedAt>
     <LastModifiedBy>defaultUser</LastModifiedBy>
-    <ManifestVersion>SHA-512:0c75767f6f894b98337982d539135df59c169b812bd37f3366489e937207bc27397b032b34a18aba0e0458ddc00a81f4d40159473c2d473a57aa07f1e439dd8a</ManifestVersion>
+    <ManifestVersion>SHA-512:012e83f6306d2d3c6dbd220fbdd18cb879b699fe0cd1c225727d91b6dcb42c284b4596b98697d8cb83622c86269ec161278d00d650d0b690556fff70c3014835</ManifestVersion>
     <Policies>
         <Policy>AM-AddCORS</Policy>
         <Policy>AM-AuthSession</Policy>
         <Policy>AM-Debug</Policy>
         <Policy>AM-RedirectAppCallback</Policy>
         <Policy>AM-RedirectAppCallbackError</Policy>
-        <Policy>AM-RedirectAppCallbackImplicit</Policy>
         <Policy>AM-RedirectLoginApplicationCode</Policy>
-        <Policy>AM-RedirectLoginApplicationImplicit</Policy>
         <Policy>AM-SaveRequest</Policy>
         <Policy>AM-SetRequest</Policy>
         <Policy>AM-SetResponseType</Policy>
         <Policy>AM-SetTokenCodeRequest</Policy>
         <Policy>AM-SetTokenCodeResponse</Policy>
-        <Policy>AM-SetTokenImplicitRequest</Policy>
         <Policy>AM-SetTokenRefreshRequest</Policy>
         <Policy>AM-SetTokenRefreshResponse</Policy>
         <Policy>AM-SetTokenRevokeRequest</Policy>
@@ -39,14 +36,12 @@
         <Policy>KV-Params</Policy>
         <Policy>LC-Session</Policy>
         <Policy>OA-GenerateAccessTokenCode</Policy>
-        <Policy>OA-GenerateAccessTokenImplicit</Policy>
         <Policy>OA-GenerateAccessTokenRefresh</Policy>
         <Policy>OA-GenerateAuthCode</Policy>
         <Policy>OA-GetAuthCodeAttributes</Policy>
         <Policy>OA-GetRefreshTokenAttributes</Policy>
         <Policy>OA-RevokeAccessToken</Policy>
         <Policy>OA-VerifyAccessToken</Policy>
-        <Policy>OA-VerifyAccessTokenParam</Policy>
         <Policy>PC-Session</Policy>
         <Policy>RF-NoCode</Policy>
         <Policy>RF-NoRefresh</Policy>
