@@ -1,4 +1,4 @@
-openapi: 3.0.0
+:qopenapi: 3.0.0
 info:
   version: 1.0.0
   title: oidc-v1-google-demo
@@ -6,11 +6,11 @@ info:
     OIDC protected resource.
     Details:
     * Integrated Portal
-      * App Credentials: vg9l2JkRWKINJAq3cuxXyDPLbxRuLrYi Ktml9oT4OFfiS2pE
+      * App Credentials: vg9l2JkRWKINJAq3cuxXyDPLbxRuLXXX Ktml9oT4OFfiSXXX
       * Callback URL: https://developer.kurtkanaskie.net/oauth_redirect
     
     * Drupal 8:
-      * App Credentials: qF9MT9jcmi80WUR9J44McpFBPdAUrrYI n8olqFjmeAIwNkB0
+      * App Credentials: qF9MT9jcmi80WUR9J44McpFBPdAUrXXX n8olqFjmeAIwNXXX
       * Callback URL: http://dev-amer-demo13.pantheonsite.io/oauth_redirect
   contact:
     email: kurtkanaskie@google.com
