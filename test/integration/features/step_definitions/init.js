@@ -15,7 +15,7 @@ module.exports = function() {
         this.apickli.storeValueInScenarioScope("apiproxy", config.apiconfig.apiproxy);
         this.apickli.storeValueInScenarioScope("basepath", config.apiconfig.basepath);
         getCredsFromExport(config.apiconfig.app, config.apiconfig.product);
-        console.log( "KEYS: for app: " + config.apiconfig.app + " and product: " + config.apiconfig.product + " are: " + keys.clientId + " " + keys.clientSecret);
+        // console.log( "KEYS: for app: " + config.apiconfig.app + " and product: " + config.apiconfig.product + " are: " + keys.clientId + " " + keys.clientSecret);
         this.apickli.storeValueInScenarioScope("clientId", keys.clientId);
         this.apickli.storeValueInScenarioScope("clientSecret", keys.clientSecret);
         callback();

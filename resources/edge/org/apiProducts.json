@@ -14,7 +14,7 @@
        "attributes" : [
           {
              "name" : "access",
-             "value" : "private"
+             "value" : "public"
           }
        ],
        "apiResources" : []

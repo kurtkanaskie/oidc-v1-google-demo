@@ -1,5 +1,5 @@
 {
-    "cicd-developer-APIGEE_ENVIRONMENT@google.com": [
+    "kurtkanaskie+cicd-app-developer-APIGEE_ENVIRONMENT@google.com": [
         {
             "name" : "oidc-v1-google-demo-app-APIGEE_ENVIRONMENT",
             "callbackUrl" : "https://kurtkanaskie.github.io/oidc-client-code-google/callback.html",

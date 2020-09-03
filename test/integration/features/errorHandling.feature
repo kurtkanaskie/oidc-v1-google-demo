@@ -1,10 +1,10 @@
 @errorHandling
 Feature: Error handling
-	As an API consumer
-	I want consistent and meaningful error responses
-	So that I can handle the errors correctly
+    As an API consumer
+    I want consistent and meaningful error responses
+    So that I can handle the errors correctly
 
-	@foo
+    @foo
     Scenario: GET /foo request not found
         When I GET /foo
         Then response code should be 404
@@ -18,7 +18,7 @@ Feature: Error handling
         And response header Content-Type should be application/json
         And response body should contain Resource not found
         
-	@foobar
+    @foobar
     Scenario: GET /foo/bar request not found
         When I GET /foo/bar
         Then response code should be 404
